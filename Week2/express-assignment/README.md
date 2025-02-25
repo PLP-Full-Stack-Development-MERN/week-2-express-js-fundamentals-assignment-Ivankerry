@@ -50,6 +50,112 @@ express-assignment
    node index.js
    ```
 
+   ## API Endpoints
+
+
+
+### **User Routes**
+
+
+
+| Method | Endpoint         | Description       |
+
+| ------ | ---------------- | ----------------- |
+
+| GET    | `/api/users`     | Get all users     |
+
+| POST   | `/api/users`     | Create a new user |
+
+| PUT    | `/api/users/:id` | Update user by ID |
+
+| DELETE | `/api/users/:id` | Delete user by ID |
+
+
+
+#### Example Requests:
+
+
+
+```sh
+
+curl -X GET http://localhost:5000/api/users
+
+```
+
+
+
+```sh
+
+curl -X POST http://localhost:5000/api/users -H "Content-Type: application/json" -d '{"name": "John Doe"}'
+
+```
+
+
+
+### **Product Routes**
+
+
+
+| Method | Endpoint            | Description          |
+
+| ------ | ------------------- | -------------------- |
+
+| GET    | `/api/products`     | Get all products     |
+
+| POST   | `/api/products`     | Create a new product |
+
+| PUT    | `/api/products/:id` | Update product by ID |
+
+| DELETE | `/api/products/:id` | Delete product by ID |
+
+
+
+#### Example Requests:
+
+
+
+```sh
+
+curl -X GET http://localhost:5000/api/products
+
+```
+
+
+
+```sh
+
+curl -X POST http://localhost:5000/api/products -H "Content-Type: application/json" -d '{"name": "Laptop"}'
+
+```
+
+
+
+## Middleware
+
+
+
+- **Logger Middleware**: Logs request details (method, URL, timestamp)
+
+
+
+## Error Handling
+
+
+
+- Global error handler to catch unexpected errors and return a proper response.
+
+
+
+## Testing
+
+
+
+- Use **Postman** or **cURL** to test API endpoints.
+
+- Check if the logger middleware is correctly logging requests.
+
+
+
 ## Usage
 
 - The application exposes RESTful APIs for user and product operations.
